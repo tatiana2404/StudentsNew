@@ -22,7 +22,7 @@ public class AddFact {
          return line;
     }
     public static Sex newGender(){
-        System.out.println("Введите пол: ");
+        System.out.println("Введите пол (man/woman): ");
         str.nextLine();
         Sex line=Sex.valueOf(str.nextLine());
         return line;
