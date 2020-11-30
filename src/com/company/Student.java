@@ -5,7 +5,7 @@ public class Student extends Human{
     private int course;
     private String recordBook;
     public Student(){}
-    public Student(String surname, String name, int age, Sex gender, String numberGroup, int course, String recordBook){
+    public Student(String surname, String name, int age, Sex gender, String numberGroup,   int course, String recordBook){
         super(surname, name, age, gender);
         this.numberGroup=numberGroup;
         this.course=course;
@@ -33,7 +33,6 @@ public class Student extends Human{
     public void setRecordBook(String recordBook) {
         this.recordBook = recordBook;
     }
-
     @Override
     public String toString() {
         return "Студент " +super.toString()+
