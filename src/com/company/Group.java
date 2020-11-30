@@ -19,13 +19,6 @@ public class Group implements Voenkom{
 
     public void addStudent (Student student) throws MyNewException{
 
-/*        for(int i=0; i<=k; i++){
-            if (student.getRecordBook() == group[i].getRecordBook()) {
-                System.out.println("Этот студент уже есть в группе");
-                break;
-            }
-        }*/
-
         for (int i = 0; i < group.length; i++) {
             if (group[i] == null) {
                 group[i] = new Student(AddFact.newSurname(), AddFact.newName(), AddFact.newAge(), AddFact.newGender(),
