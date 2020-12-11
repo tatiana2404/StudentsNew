@@ -28,15 +28,6 @@ public class AddFact {
         return line;
 
     }
-    public static String newGroup(){
-        System.out.println("Введите группу: ");
-        if (str.hasNextLine()) {
-            String line = str.nextLine();
-            return line;
-        } else {
-            return "Извините, но это явно не строка. Перезапустите программу и попробуйте снова!";
-        }
-    }
 
     public static int newCourse(){
         System.out.println("Введите номер курса: ");
