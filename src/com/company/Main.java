@@ -33,17 +33,37 @@ public class Main {
                         System.out.println(group);
                         break;
                     case 4:
+                        try{
+                            System.out.println(group.findStudent().toString());
+                            break;
+                        }catch (NullPointerException e){
+                            System.out.println("Студент не найден");
+                        }
+
+                    case 5:
+                        try{
+                            group.deleteStudent();
+                            break;
+                        }catch (NullPointerException e){
+                            System.out.println("Студент не найден");
+                        }
+                        break;
+                    case 6:
                         voen.setGroup(group.otbor());
                         System.out.println(voen.toString());
                         break;
-                    case 5:
+                    case 7:
+                        group.saveToFile();
+                        System.out.println("Успешно сохранено");
+                        break;
+                    case 8:
                         return;
                     default:
                         System.out.println("Выберите правильный номер");
                         showMenu();
                 }
                 optionn=showMenu();
-            } while (optionn != 5);
+            } while (optionn != 8);
             System.out.println("Спасибо");
         } catch (MyNewException e){
             System.out.println("Индекс за пределами массива."+e);
@@ -57,8 +77,11 @@ public class Main {
         System.out.println("1. Добавить студента в группу");
         System.out.println("2. Отсортировать по фамилии");
         System.out.println("3. Отсортировать по полу");
-        System.out.println("4. Вывести призывников");
-        System.out.println("5. Выход");
+        System.out.println("4. Найти студента по фамилии");
+        System.out.println("5. Удалить студента");
+        System.out.println("6. Вывести призывников");
+        System.out.println("7. Записать группу в файл");
+        System.out.println("8. Выход");
         System.out.println("Введите ваш выбор:");
         optionn = keyboard.nextInt();
 
